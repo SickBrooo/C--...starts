@@ -4,6 +4,8 @@
     "chrono": "cpp",
     "text_encoding": "cpp",
     "typeindex": "cpp",
-    "typeinfo": "cpp"
+    "typeinfo": "cpp",
+    "format": "cpp",
+    "ostream": "cpp"
   }
 }

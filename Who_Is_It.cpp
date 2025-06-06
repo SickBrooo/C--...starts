@@ -1,46 +1,41 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
-class Student
-{
-public:
-  int id;
+class Student{
+  public:
+  int roll;
   string name;
   char sec;
   int marks;
 };
 int main()
 {
-  int t;cin>>t;
-  for (int i = 0; i < t; i++)
+  int t;
+  cin>>t;
+  for(int i=0;i<t;i++)
   {
-    Student topper;
-    for (int i = 0; i < 3; i++)
+       Student topper;
+   for(int i=1;i<=3;i++)
+   {
+    Student tem;
+    cin>>tem.roll>>tem.name>>tem.sec>>tem.marks;
+    if(i==1)
     {
-      Student tem;
-      cin >> tem.id >> tem.name >> tem.sec >> tem.marks;
-      if (i == 1)
-      {
-        topper = tem;
+      topper=tem;
+    }
+    else{
+      if(tem.marks>topper.marks){
+        topper=tem;
       }
-      else
-      {
-        if (tem.marks > topper.marks)
-        {
-          topper = tem;
+      else if(tem.marks==topper.marks){
+        if(tem.roll<topper.roll){
+          topper=tem;
         }
-        if(topper.marks==tem.marks)
-        {
-          if(tem.id<topper.id)
-          {
-             topper=tem;
-          }
-        }
-        
       }
     }
-    cout << topper.id << " " << topper.name << " " << topper.sec << " " << topper.marks;
-    cout << endl;
+   }
+   cout<<topper.roll<<" "<<topper.name<<" "<<topper.sec<<" "<<topper.marks<<endl;
   }
+   
 
   return 0;
 }
