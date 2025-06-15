@@ -1,5 +1,14 @@
 #include<bits/stdc++.h>
 using namespace std;
+string removeZero(string str)
+{
+    int i = 0;
+    while (str[i] == '0')
+     i++;
+    str.erase(0, i);
+
+    return str;
+}
 int main()
 {
   string s;
@@ -18,8 +27,13 @@ int main()
     }
 
   }
+  string q=removeZero(s);
+  cout<<q;
+  cout<<endl;
+
   if(flag==s.size())
   {
+    
     cout<<"YES"<<endl;
   }
   else
